@@ -32,11 +32,11 @@ Things you may want to cover:
 | text               | text       | null: false                    |
 | price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
-| genre_id           | integer    | null: false, foreign_key: true |
-| item_status_id     | integer    | null: false, foreign_key: true |
-| delivery_charge_id | integer    | null: false, foreign_key: true |
-| state_id           | integer    | null: false, foreign_key: true |
-| delivery_days_id   | integer    | null: false, foreign_key: true |
+| genre_id           | integer    | null: false                    |
+| item_status_id     | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
+| state_id           | integer    | null: false                    |
+| delivery_days_id   | integer    | null: false                    |
 
 * Database initialization
 ### Association
@@ -62,7 +62,7 @@ Things you may want to cover:
 | city         | string     | null: false                    |
 | building     | string     |                                |
 | tel          | string     | null: false                    |
-| state_id     | integer    | null: false, foreign_key: true |
+| state_id     | integer    | null: false                    |
 | purchase     | references | null: false, foreign_key: true |
 
 ### Association
