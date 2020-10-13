@@ -26,28 +26,30 @@ Things you may want to cover:
 ##　items　テーブル
 
 * Database creation
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| title         | string     | null: false                    |
-| text          | text       | null: false                    |
-| price         | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
-| genre         | integer    | null: false, foreign_key: true |
-| item_status   | integer    | null: false, foreign_key: true |
-| delivery_area | integer    | null: false, foreign_key: true |
-| delivery_days | integer    | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| title              | string     | null: false                    |
+| text               | text       | null: false                    |
+| price              | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
+| genre_id           | integer    | null: false, foreign_key: true |
+| item_status_id     | integer    | null: false, foreign_key: true |
+| delivery_charge_id | integer    | null: false, foreign_key: true |
+| state_id           | integer    | null: false, foreign_key: true |
+| delivery_days_id   | integer    | null: false, foreign_key: true |
 
 * Database initialization
 ### Association
 
 * How to run the test suite
 - belongs_to :user
-- belongs_to :purchase
+- has_one :purchase
 - has_one_attached :image
 - belongs_to_active_hash :state
 - belongs_to_active_hash :genre
 - belongs_to_active_hash :item_status
-- belongs_to_active_hash :delivery_area
+- belongs_to_active_hash :delivery_charge
+- belongs_to_active_hash :state
 - belongs_to_active_hash :delivery_days
 
 * Services (job queues, cache servers, search engines, etc.)
@@ -59,9 +61,10 @@ Things you may want to cover:
 | postal_code  | string     | null: false                    |
 | house_number | string     | null: false                    |
 | city         | string     | null: false                    |
-| building     | string     | null: false                    |
+| building     | string     |                                |
 | tel          | string     | null: false                    |
-| state        | integer    | null: false, foreign_key: true |
+| state_id     | integer    | null: false, foreign_key: true |
+| purchase_id  | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -78,6 +81,6 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
-- belongs_to :address
-- has_many :items
+- belongs_to :item
+- has_one :address
 
