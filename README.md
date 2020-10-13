@@ -13,7 +13,7 @@ Things you may want to cover:
 | first_name       | string | null: false  |
 | family_name_kana | string | null: false  |
 | first_name_kana  | string | null: false  |
-| birth_date       | string | null: false  |
+| birth_date       | date   | null: false  |
 
 * Ruby version
 ### Association
@@ -21,7 +21,6 @@ Things you may want to cover:
 * System dependencies
 - has_many :items
 - has_many :purchases
-- has_one :address
 
 * Configuration
 ##　items　テーブル
@@ -39,6 +38,7 @@ Things you may want to cover:
 
 * How to run the test suite
 - belongs_to :user
+- belongs_to :purchase
 - has_one_attached :image
 - belongs_to_active_hash :state
 - belongs_to_active_hash :genre
@@ -54,9 +54,8 @@ Things you may want to cover:
 | ------------ | ----------- | ------------------------------ |
 | postal_code  | string      | null: false                    |
 | house_number | string      | null: false                    |
-| building     | string      |                                |
-| tel          | integer     | null: false                    |
-| user         | references  | null: false, foreign_key: true |
+| building     | string      | null: false                    |
+| tel          | string      | null: false                    |
 
 ### Association
 
@@ -69,10 +68,45 @@ Things you may want to cover:
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
 | user         | references | null: false, foreign_key: true |
-| address      | references | null: false, foreign_key: true |
 | item         | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :address
+- has_many :items
+
+##　state　テーブル
+
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| state-id     | integer | null: false |
+
+##　genre　テーブル
+
+| Column       | Typ     | Options     |
+| ------------ | ------- | ----------- |
+| genre-id     | integer | null: false |
+
+##　item_status　テーブル
+
+| Column         | Type    | Options     |
+| -------------- | ------- | ----------- |
+| item_status-id | integer | null: false |
+
+##　delivery_area　テーブル
+
+| Column           | Type    | Options     |
+| ---------------- | ------- | ----------- |
+| delivery_area-id | integer | null: false |
+
+##　delivery_days　テーブル
+
+| Column           | Type    | Options     |
+| ---------------- | ------- | ----------- |
+| delivery_days-id | integer | null: false |
+
+##　city　テーブル
+
+| Column  | Type    | Options     |
+| ------- | ------- | ----------- |
+| city-id | integer | null: false |
