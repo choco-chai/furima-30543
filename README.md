@@ -49,7 +49,6 @@ Things you may want to cover:
 - belongs_to_active_hash :genre
 - belongs_to_active_hash :item_status
 - belongs_to_active_hash :delivery_charge
-- belongs_to_active_hash :state
 - belongs_to_active_hash :delivery_days
 
 * Services (job queues, cache servers, search engines, etc.)
@@ -68,7 +67,7 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :purchases
+- belongs_to :purchase
 - belongs_to_active_hash :state
 
 ##　purchases　テーブル
