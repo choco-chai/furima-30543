@@ -32,10 +32,10 @@ Things you may want to cover:
 | text          | text       | null: false                    |
 | price         | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
-| genre         | references | null: false, foreign_key: true |
-| item_status   | references | null: false, foreign_key: true |
-| delivery_area | references | null: false, foreign_key: true |
-| delivery_days | references | null: false, foreign_key: true |
+| genre         | integer    | null: false, foreign_key: true |
+| item_status   | integer    | null: false, foreign_key: true |
+| delivery_area | integer    | null: false, foreign_key: true |
+| delivery_days | integer    | null: false, foreign_key: true |
 
 * Database initialization
 ### Association
@@ -58,16 +58,15 @@ Things you may want to cover:
 | ------------ | ---------- | ------------------------------ |
 | postal_code  | string     | null: false                    |
 | house_number | string     | null: false                    |
+| city         | string     | null: false                    |
 | building     | string     | null: false                    |
 | tel          | string     | null: false                    |
-| state        | references | null: false, foreign_key: true |
-| city         | references | null: false, foreign_key: true |
+| state        | integer    | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :purchase
+- has_many :purchases
 - belongs_to_active_hash :state
-- belongs_to_active_hash :city
 
 ##　purchases　テーブル
 
@@ -79,5 +78,6 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
+- belongs_to :address
 - has_many :items
 
