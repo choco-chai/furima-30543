@@ -26,12 +26,16 @@ Things you may want to cover:
 ##　items　テーブル
 
 * Database creation
-| Column     | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| title      | string     | null: false                    |
-| text       | text       | null: false                    |
-| price      | integer    | null: false                    |
-| user       | references | null: false, foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| title         | string     | null: false                    |
+| text          | text       | null: false                    |
+| price         | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
+| genre         | references | null: false, foreign_key: true |
+| item_status   | references | null: false, foreign_key: true |
+| delivery_area | references | null: false, foreign_key: true |
+| delivery_days | references | null: false, foreign_key: true |
 
 * Database initialization
 ### Association
@@ -50,12 +54,14 @@ Things you may want to cover:
 ##　addresses　テーブル
 
 * Deployment instructions
-| Column       | Type        | Options                        |
-| ------------ | ----------- | ------------------------------ |
-| postal_code  | string      | null: false                    |
-| house_number | string      | null: false                    |
-| building     | string      | null: false                    |
-| tel          | string      | null: false                    |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| postal_code  | string     | null: false                    |
+| house_number | string     | null: false                    |
+| building     | string     | null: false                    |
+| tel          | string     | null: false                    |
+| state        | references | null: false, foreign_key: true |
+| city         | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -75,38 +81,3 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :items
 
-##　state　テーブル
-
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| state-id     | integer | null: false |
-
-##　genre　テーブル
-
-| Column       | Typ     | Options     |
-| ------------ | ------- | ----------- |
-| genre-id     | integer | null: false |
-
-##　item_status　テーブル
-
-| Column         | Type    | Options     |
-| -------------- | ------- | ----------- |
-| item_status-id | integer | null: false |
-
-##　delivery_area　テーブル
-
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| delivery_area-id | integer | null: false |
-
-##　delivery_days　テーブル
-
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| delivery_days-id | integer | null: false |
-
-##　city　テーブル
-
-| Column  | Type    | Options     |
-| ------- | ------- | ----------- |
-| city-id | integer | null: false |
