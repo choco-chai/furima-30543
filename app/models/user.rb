@@ -8,12 +8,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :family_name, presence: true, format: { with: /\A([ぁ-んァ-ン一-龥]|ー)+\z/}
   validates :first_name, presence: true, format: { with: /\A([ぁ-んァ-ン一-龥]|ー)+\z/}
-<<<<<<< HEAD
-  validates :family_name_kana, presence: true, format: { with: /\A[ァ-ヶー－]+\z/}
-  validates :first_name_kana, presence: true, format: { with: /\A[ァ-ヶー－]+\z/}
-=======
   validates :family_name_kana, presence: true, format: { with: /\A([ァ-ン]|ー)+\z/}
   validates :first_name_kana, presence: true, format: { with: /\A([ァ-ン]|ー)+\z/}
->>>>>>> parent of 5da47fe... revert
   validates :birth_date, presence: true
 end

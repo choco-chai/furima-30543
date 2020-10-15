@@ -82,22 +82,11 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    diff-lcs (1.4.4)
->>>>>>> parent of c128b17... revert2
-=======
 
->>>>>>> parent of cc505b5... Revert "revert2"
-=======
-
->>>>>>> parent of cc505b5... Revert "revert2"
-=======
     diff-lcs (1.4.4)
->>>>>>> parent of 82328b4... Revert "Revert "revert2""
+
+    diff-lcs (1.4.4)
+
     erubi (1.9.0)
     ffi (1.13.1)
     globalid (0.4.2)
@@ -251,36 +240,27 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   devise
-<<<<<<< HEAD
-=======
   factory_bot_rails
   faker
->>>>>>> parent of c128b17... revert2
-=======
+
 
   factory_bot_rails
   faker
 
   devise
 
->>>>>>> parent of cc505b5... Revert "revert2"
-=======
-
   factory_bot_rails
   faker
 
   devise
 
->>>>>>> parent of cc505b5... Revert "revert2"
-=======
+
   devise
   factory_bot_rails
   faker
->>>>>>> parent of 82328b4... Revert "Revert "revert2""
+
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4)
