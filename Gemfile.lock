@@ -87,9 +87,13 @@ GEM
       warden (~> 1.2.3)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     diff-lcs (1.4.4)
 >>>>>>> parent of c128b17... revert2
+=======
+
+>>>>>>> parent of cc505b5... Revert "revert2"
 =======
 
 >>>>>>> parent of cc505b5... Revert "revert2"
@@ -247,12 +251,21 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
 <<<<<<< HEAD
+<<<<<<< HEAD
   devise
 <<<<<<< HEAD
 =======
   factory_bot_rails
   faker
 >>>>>>> parent of c128b17... revert2
+=======
+
+  factory_bot_rails
+  faker
+
+  devise
+
+>>>>>>> parent of cc505b5... Revert "revert2"
 =======
 
   factory_bot_rails
