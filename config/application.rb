@@ -11,10 +11,16 @@ module Furima30543
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     config.i18n.default_locale = :ja
 =======
 >>>>>>> parent of c128b17... revert2
+=======
+=======
+    config.i18n.default_locale = :ja
+>>>>>>> parent of fa50f59... テストコード実装
+>>>>>>> parent of cc505b5... Revert "revert2"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
