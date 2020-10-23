@@ -19,9 +19,9 @@ RSpec.describe PurchaseAddress, type: :model do
     expect(@purchase_address.errors.full_messages).to include("Postal code can't be blank")
   end
   it '郵便番号が半角のハイフンを含んだ正しい形式でないと保存できないこと' do
-    @purchase_address.postal_code = 1112222
+    @purchase_address.postal_code = 1_112_222
     @purchase_address.valid?
-    expect(@purchase_address.errors.full_messages).to include("Postal code Input correctly")
+    expect(@purchase_address.errors.full_messages).to include('Postal code Input correctly')
   end
   it '配送先住所の都道府県が選択されていないと保存できないこと' do
     @purchase_address.state_id = nil
@@ -53,12 +53,12 @@ RSpec.describe PurchaseAddress, type: :model do
     expect(@purchase_address.errors.full_messages).to include("Tel can't be blank")
   end
   it '電話番号が11文字以内であれば保存できること' do
-    @purchase_address.tel = "0458889999"
+    @purchase_address.tel = '0458889999'
     expect(@purchase_address).to be_valid
   end
   it '電話番号にハイフン等の記号が含まれていると保存できないこと' do
-    @purchase_address.tel = "090-1234-5678"
+    @purchase_address.tel = '090-1234-5678'
     @purchase_address.valid?
-    expect(@purchase_address.errors.full_messages).to include("Tel Input only number")
+    expect(@purchase_address.errors.full_messages).to include('Tel Input only number')
   end
 end

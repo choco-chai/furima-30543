@@ -6,6 +6,6 @@ FactoryBot.define do
     building            { '柳ビル' }
     tel                 { '09012345678' }
     state_id            { '2' }
-    token               {"tok_abcdefghijk00000000000000000"}
+    token               { 'tok_abcdefghijk00000000000000000' }
   end
 end
