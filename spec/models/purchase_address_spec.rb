@@ -61,10 +61,15 @@ RSpec.describe PurchaseAddress, type: :model do
         @purchase_address.valid?
         expect(@purchase_address.errors.full_messages).to include("Tel can't be blank")
       end
+      it '電話番号が11文字以上では保存できないこと' do
+        @purchase_address.tel = '090123456789'
+        @purchase_address.valid?
+        expect(@purchase_address.errors.full_messages).to include('Tel must be up to 11 digits')
+      end
       it '電話番号にハイフン等の記号が含まれていると保存できないこと' do
         @purchase_address.tel = '090-1234-5678'
         @purchase_address.valid?
-        expect(@purchase_address.errors.full_messages).to include('Tel Input only number')
+        expect(@purchase_address.errors.full_messages).to include('Tel must be up to 11 digits')
       end
     end
   end

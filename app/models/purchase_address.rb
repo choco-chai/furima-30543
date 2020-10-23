@@ -4,7 +4,7 @@ class PurchaseAddress
 
   with_options presence: true do
     validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/, message: 'Input correctly' }
-    validates :tel, format: { with: /\A\d{,11}\z/, message: 'Input only number' }
+    validates :tel, format: { with: /\A\d{,11}\z/, message: 'must be up to 11 digits' }
     validates :state_id, numericality: { other_than: 1 }
     validates :city, :house_number, :token
   end
