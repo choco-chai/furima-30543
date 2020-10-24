@@ -6,7 +6,7 @@
     addTaxDom.innerHTML = Math.floor(inputValue * 0.1);
     const InputAddTax = inputValue * 0.1;
     const profitDom = document.getElementById("profit");
-    profitDom.innerHTML = inputValue - InputAddTax;
+    profitDom.innerHTML = Math.floor(inputValue - InputAddTax);
   });
  };
  setInterval(price, 1000);
